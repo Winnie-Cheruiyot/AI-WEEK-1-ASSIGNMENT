@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BitPulse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>BitPulse 💰</h1>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Ask about sustainability, investment..." required>
+            <button type="submit">Ask</button>
+        </form>
+        {% if advice %}
+            <div class="advice-box">{{ advice }}</div>
+        {% endif %}
+        <h2>Live Prices & Trends</h2>
+        <table class="crypto-table">
+            <thead>
+                <tr>
+                    <th>Coin</th>
+                    <th>Price (USD)</th>
+                    <th>24h Change (%)</th>
+                    <th>Market Cap Rank</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for coin in data %}
+                <tr>
+                    <td>{{ coin.name }}</td>
+                    <td>${{ coin.current_price }}</td>
+                    <td style="color: {{ 'green' if coin.price_change_percentage_24h >= 0 else 'red' }};">
+                        {{ "%.2f"|format(coin.price_change_percentage_24h) }}%
+                    </td>
+                    <td>{{ coin.market_cap_rank }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
