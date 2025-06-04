@@ -1,4 +1,4 @@
-# Crypto Project
+# BitPulse Crypt
 
 A web application for cryptocurrency tracking and analysis.
 
@@ -13,12 +13,13 @@ A web application for cryptocurrency tracking and analysis.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com//crypto.git
+    git clone https://github.com
     ```
 2. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
+    
 3. Run the application:
     ```bash
     python app.py
