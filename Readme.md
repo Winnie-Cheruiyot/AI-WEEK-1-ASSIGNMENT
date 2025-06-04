@@ -1,4 +1,4 @@
-# BitPulse Crypt
+# BitPulse Crypto
 
 A web application for cryptocurrency tracking and analysis.
 
@@ -13,7 +13,7 @@ A web application for cryptocurrency tracking and analysis.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com
+    git clone https://github.com](https://github.com/Winnie-Cheruiyot/AI-WEEK-1-ASSIGNMENT.git
     ```
 2. Install dependencies:
     ```bash
